@@ -6,7 +6,7 @@ def main():
     print(f"{num_words} words found in the document")
     print(f'{len(num_char_dict)} distinct characters found in the document: ')
     for k, v in num_char_dict.items():
-        print(f"{k}: {v} in the document")
+        print(f"{k}: {v}")
 
 
 def get_num_words(text):
@@ -26,7 +26,7 @@ def get_character_counts(text):
     character_dict = {}
     for char in text.lower():
         if char not in character_dict:
-            character_dict.update({char: 0})
+            character_dict.update({char: 1})
         else:
             character_dict[char] += 1
     return character_dict
